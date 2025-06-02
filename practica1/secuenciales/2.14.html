@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2.14 - Monto del Cheque</title>
+    <script src="../script/SCRIPTS SECUENCIALES.js" defer></script>
+    <link rel="stylesheet" href="../styles/estilo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../INDEX.html">menu</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>cheque viáticos</h2>
+        <label for="dias">Num. de dias de estancia:</label>
+        <input type="number" id="dias">
+
+        <label for="costoHotel">Costo del hotel por dia:</label>
+        <input type="number" id="costoHotel">
+
+        <label for="comida">Gasto diario de comida:</label>
+        <input type="number" id="comida">
+
+        <button onclick="obtenerCheque()">Calcular cheque</button>
+        <div id="totalCheque" class="resultado"></div>
+    </div>
+</body>
+</html>

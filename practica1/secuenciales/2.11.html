@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2.11 Electricidad</title>
+  <link rel="stylesheet" href="../styles/estilo.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../INDEX.html">menu</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h3>Consumo de electricidad</h3>
+
+    <label for="kilowatts">Kilowatts consumidos:</label>
+    <input type="number" id="kilowatts">
+
+    <label for="precio">Precio por kilowatt:</label>
+    <input type="number" id="precio" step="0.01">
+
+    <button onclick="calcularElectricidad()">Calcular pago</button>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="../script/SCRIPTS SECUENCIALES.js"></script>
+</body>
+</html>
