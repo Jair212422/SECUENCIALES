@@ -16,11 +16,6 @@ function calcularElectricidad() {
 
 function calcularFinal() {
     const precio = parseFloat(document.getElementById("precio").value);
-
-    if (isNaN(precio) || precio < 0) {
-        document.getElementById("resultado").innerText = "Ingrese un precio válido.";
-        return;
-    }
     const descuento = precio * 0.20;
     const precioConDescuento = precio - descuento;
     const iva = precioConDescuento * 0.15;
@@ -31,10 +26,6 @@ function calcularFinal() {
 }
 function calcularAhorro(){
     const sueldo = parseFloat(document.getElementById("sueldo").value);
-    if(isNaN(sueldo)||sueldo<0){
-        document.getElementById("resultado").innerText = "Ingrese un sueldo valido";
-        return;
-    }
     const ahorroSemanal = (sueldo*0.15);
     const semanasPorMes = 4;
     const mesesPorAño = 12;
@@ -67,14 +58,7 @@ function obtenerCheque(){
   }
   function calcularArea() {
     const lado = parseFloat(document.getElementById("lado").value);
-
-    if (isNaN(lado) || lado < 0) {
-        document.getElementById("resultado").innerText = "Ingrese una longitud valida.";
-        return;
-    }
-
     const area = lado * lado;
-
     document.getElementById("resultado").innerText =
         "EL AREA ES:"+area;
     }
@@ -82,12 +66,6 @@ function calcularPromedio() {
     const e1 = parseFloat(document.getElementById("exam1").value);
     const e2 = parseFloat(document.getElementById("exam2").value);
     const e3 = parseFloat(document.getElementById("exam3").value);
-
-    if ([e1, e2, e3].some(n => isNaN(n) || n < 0 || n > 100)) {
-        document.getElementById("resultado").innerText = "Ingrese calificaciones válidas (0 a 100).";
-        return;
-    }
-
     const promedio = e1 * 0.25 + e2 * 0.25 + e3 * 0.5;
 
     document.getElementById("resultado").innerText =
@@ -95,12 +73,6 @@ function calcularPromedio() {
 }
 function calcularTiempoVivido() {
     const edad = parseInt(document.getElementById("edad").value);
-
-    if (isNaN(edad) || edad < 0) {
-        document.getElementById("resultado").innerText = "Ingrese bien los datos.";
-        return;
-    }
-
     const meses = edad * 12;
     const semanas = edad * 52;
     const dias = edad * 365;
@@ -116,24 +88,13 @@ function calcularTiempoVivido() {
 function calcularCosto() {
     const minutos = parseFloat(document.getElementById("minutos").value);
     const costoPorMinuto = parseFloat(document.getElementById("costoMinuto").value);
-    if (isNaN(minutos) || isNaN(costoPorMinuto) || minutos < 0 || costoPorMinuto < 0) {
-        document.getElementById("resultado").innerText = "Por favor ingrese valores válidos.";
-        return;
-    }
     const total = minutos * costoPorMinuto;
     document.getElementById("resultado").innerText = "El costo total seria:" + total.toFixed(2);
 }
 function calcularEstancia() {
     const noches = parseInt(document.getElementById("noches").value);
     const costoPorNoche = parseFloat(document.getElementById("costoNoche").value);
-
-    if (isNaN(noches) || isNaN(costoPorNoche) || noches <= 0 || costoPorNoche <= 0) {
-        document.getElementById("resultado").innerText = "Por favor, introduce valores válidos.";
-        return;
-    }
-
     const total = noches * costoPorNoche;
-
     document.getElementById("resultado").innerText ="El total a pagar por la estancia es de:"+total;
 }
 
